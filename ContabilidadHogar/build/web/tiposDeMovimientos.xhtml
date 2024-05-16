@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <head>
+        <title>Tipos de movimientos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h:form>
+
+            <h:panelGrid columns="5">
+                <h:outputLabel value="Nombre del nuevo movimiento"></h:outputLabel>
+                <h:inputText value="#{ManagedBeanMovimiento.movimientoBean.nombre}" onkeyup="this.value = this.value.toUpperCase();"></h:inputText><!--Obligamos a que el texto esté siempre en mayúscula-->
+                <h:commandButton value="Registrar" action="#{ManagedBeanMovimiento.registrarMovimiento()}"></h:commandButton>
+                <h:commandButton value="Limpiar" action="#{ManagedBeanMovimiento.clear()}"></h:commandButton><!--Limpiar el cuadro de texto-->
+            </h:panelGrid>
+
+            <h:messages style="color: red;border: 1px solid red;background-color: yellow" ></h:messages><!--Para mostrar un mensaje de error, en caso de valor no válido-->
+
+            <!--Mostramos todos los datos que tenemos registrados-->
+            <h:dataTable value="#{ManagedBeanMovimiento.listaDeMovimientos}" var="movimiento">
+                <h:column>
+                    <h:outputLabel value="#{movimiento}"></h:outputLabel>                    
+                </h:column>
+                <h:column>
+                    <h:commandLink value="Eliminar" action="#{ManagedBeanMovimiento.deleteMovimiento(movimiento)}"></h:commandLink>
+                </h:column>
+            </h:dataTable>
+             <h:commandLink value="Inicio" action="index"></h:commandLink>
+        </h:form>
+    </body>
+</html>

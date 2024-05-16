@@ -1,0 +1,34 @@
+**********************************************************************************************************************************
+LIBRO DE RECETAS
+*********************************************************************************************************************************
+NOMBRE DE LA RECETA:Ensalada de Pimiento Dulce
+TIPO DE PLATO:Ensalada
+FECHA DE CREACIÓN:2010-01-23
+INGREDIENTES:[pimientos dulces, cebolla, vinagre, aceite, sal, pimienta]
+INSTRUCCIONES: 
+1.- Se lavan 4 pimientos dulces, se les quita la parte superior y las semillas y se cortan en tiras.
+2.- Se pela la cebolla y se corta en tiras delgadas.
+3.- En un tazón grande, se mezcla el vinagre, el aceite, la sal y la pimienta.
+4.- Se añade el pimiento dulce y la cebolla y se revuelve hasta que quede todo cubierto.
+5.- Se cubre el tazón y se refrigera durante 30 minutos antes de servir.
+*********************************************************************************************************************************
+NOMBRE DE LA RECETA:Calabacita fantástica
+TIPO DE PLATO:Acompañamiento
+FECHA DE CREACIÓN:2000-02-02
+INGREDIENTES:[calabacitas, ajo en polvo, sal, queso parmesano]
+INSTRUCCIONES: 
+1.- Se precalienta el horno a 375 grados.
+2.- Se cortan 2 calabacines en rodajas y se extienden en un molde para pastel.
+3.- Sobre las calabitas se rocían dos cucharadas de ajo en polvo,la sal y el queso.
+4.- Se hornea sin cubrir 40 minutos.
+*********************************************************************************************************************************
+NOMBRE DE LA RECETA:Pudin de almendras y arroz
+TIPO DE PLATO:Postre
+FECHA DE CREACIÓN:2003-12-28
+INGREDIENTES:[leche de almendras, arroz blanco, azúcar, vainilla, extracto de almendras, canela, almendras tostadas]
+INSTRUCCIONES: 
+1.- Se combina 3 tazas de leche de almendras y una taza de arroz en una cacerola y se calienta hasta que hierva.
+2.- Se deja que hierva durante 45 minutos con la tapadera puesta.
+3.- Se añade 1/4 de taza de azúcar, 1 cucharadita de vainilla,1/4 de cucharadita de extracto de almendras y la canela.
+4.- Se revuelve y se sirve en caliente.
+*********************************************************************************************************************************

@@ -1,0 +1,299 @@
+2024-04-23 20:53:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Tipo de dato desconocido : "BIGINIT"
+Unknown data type: "BIGINIT"; SQL statement:
+CREATE TABLE IF NOT EXISTS FACTURA(
+    ID BIGINIT NOT NULL PRIMARY KEY auto_increment,
+    NOMBRE VARCHAR(25) NOT NULL,
+    PRECIO DOUBLE NOT NULL,
+);
+
+
+MERGE INTO FACTURA(ID,NOMBRE,PRECIO) VALUES
+(1,"LUZ",68.50),
+(2,"AGUA",30.50),
+(3,"GAS",60.50),
+(4,"INTERNET",23.50), [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at ejemplo2.Ejemplo2.createTables(Ejemplo2.java:87)
+	at ejemplo2.Ejemplo2.main(Ejemplo2.java:63)
+2024-04-23 20:54:04 database: flush
+org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Ignacio/Documents/NetBeansProjects/Ejemplo2/contabilidad.h2db.mv.db [1.4.200/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Ignacio/Documents/NetBeansProjects/Ejemplo2/contabilidad.h2db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at ejemplo2.Ejemplo2.main(Ejemplo2.java:57)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Ignacio/Documents/NetBeansProjects/Ejemplo2/contabilidad.h2db.mv.db [1.4.200/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Ignacio/Documents/NetBeansProjects/Ejemplo2/contabilidad.h2db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 25 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Ignacio/Documents/NetBeansProjects/Ejemplo2/contabilidad.h2db.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 19 more
+2024-04-23 20:54:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Tipo de dato desconocido : "BIGINIT"
+Unknown data type: "BIGINIT"; SQL statement:
+CREATE TABLE IF NOT EXISTS FACTURA(
+    ID BIGINIT NOT NULL PRIMARY KEY auto_increment,
+    NOMBRE VARCHAR(25) NOT NULL,
+    PRECIO DOUBLE NOT NULL,
+);
+
+
+MERGE INTO FACTURA(ID,NOMBRE,PRECIO) VALUES
+(1,"LUZ",68.50),
+(2,"AGUA",30.50),
+(3,"GAS",60.50),
+(4,"INTERNET",23.50), [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at ejemplo2.Ejemplo2.createTables(Ejemplo2.java:87)
+	at ejemplo2.Ejemplo2.main(Ejemplo2.java:63)
+2024-04-23 20:56:10 database: flush
+org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Ignacio/Documents/NetBeansProjects/Ejemplo2/contabilidad.h2db.mv.db [1.4.200/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Ignacio/Documents/NetBeansProjects/Ejemplo2/contabilidad.h2db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at ejemplo2.Ejemplo2.main(Ejemplo2.java:57)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Ignacio/Documents/NetBeansProjects/Ejemplo2/contabilidad.h2db.mv.db [1.4.200/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Ignacio/Documents/NetBeansProjects/Ejemplo2/contabilidad.h2db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 25 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Ignacio/Documents/NetBeansProjects/Ejemplo2/contabilidad.h2db.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 19 more
+2024-04-23 20:56:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Tipo de dato desconocido : "BIGINIT"
+Unknown data type: "BIGINIT"; SQL statement:
+CREATE TABLE IF NOT EXISTS FACTURA(
+    ID BIGINIT NOT NULL PRIMARY KEY auto_increment,
+    NOMBRE VARCHAR(25) NOT NULL,
+    PRECIO DOUBLE NOT NULL,
+);
+
+
+MERGE INTO FACTURA(ID,NOMBRE,PRECIO) VALUES
+(1,"LUZ",68.50),
+(2,"AGUA",30.50),
+(3,"GAS",60.50),
+(4,"INTERNET",23.50), [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at ejemplo2.Ejemplo2.createTables(Ejemplo2.java:87)
+	at ejemplo2.Ejemplo2.main(Ejemplo2.java:63)
+2024-04-23 20:59:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DELETE TABLE[*] LINEATICKET"; se esperaba "identifier"
+Syntax error in SQL statement "DELETE TABLE[*] LINEATICKET"; expected "identifier"; SQL statement:
+DELETE TABLE LINEATICKET [42001-200]
+2024-04-23 21:00:46 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "LINEATICKETLINEATICKET" no encontrada
+Table "LINEATICKETLINEATICKET" not found; SQL statement:
+DROP TABLE LINEATICKETLINEATICKET [42102-200]
+2024-04-23 21:09:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Tipo de dato desconocido : "BIGINIT"
+Unknown data type: "BIGINIT"; SQL statement:
+CREATE TABLE IF NOT EXISTS FACTURA(
+    ID BIGINIT NOT NULL PRIMARY KEY auto_increment,
+    NOMBRE VARCHAR(25) NOT NULL,
+    PRECIO DOUBLE NOT NULL
+);
+
+MERGE INTO FACTURA (ID,NOMBRE,PRECIO) VALUES
+(1,"LUZ",20)
+(2,"AGUA",30)
+(3,"INTERNET",40)
+(4,"GAS",50)
+         
+          [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at ejemplo2.Ejemplo2.createTables(Ejemplo2.java:87)
+	at ejemplo2.Ejemplo2.main(Ejemplo2.java:63)
+2024-04-23 21:09:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Tipo de dato desconocido : "BIGINIT"
+Unknown data type: "BIGINIT"; SQL statement:
+CREATE TABLE IF NOT EXISTS FACTURA(
+    ID BIGINIT NOT NULL PRIMARY KEY auto_increment,
+    NOMBRE VARCHAR(25) NOT NULL,
+    PRECIO DOUBLE NOT NULL
+);
+
+MERGE INTO FACTURA (ID,NOMBRE,PRECIO) VALUES
+(1,"LUZ",20),
+(2,"AGUA",30),
+(3,"INTERNET",40),
+(4,"GAS",50);
+         
+          [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at ejemplo2.Ejemplo2.createTables(Ejemplo2.java:87)
+	at ejemplo2.Ejemplo2.main(Ejemplo2.java:63)
+2024-04-23 21:13:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "PRODUCTO" no encontrada
+Table "PRODUCTO" not found; SQL statement:
+                    
+
+MERGE INTO PRODUCTO(ID,NOMBRE, PRECIO) VALUES
+(1,'Producto 1', 13.7447817594662),
+(2, 'Producto 2', 15.504554622987609),
+(3, 'Producto 3', 13.894065124488646),
+(4,  'Producto 4', 11.88227167001587),
+(5,  'Producto 5', 19.712651122160853),
+(6,  'Producto 6', 13.908057022812256),
+(7,  'Producto 7', 13.269162198915039),
+(8, 'Producto 8', 11.361505074956748),
+(9,  'Producto 9', 16.370210279999082),
+(10,  'Producto 10', 18.38855699920139);    
+
+
+          [42102-200]
+2024-04-23 21:14:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "PRODUCTO" no encontrada
+Table "PRODUCTO" not found; SQL statement:
+                    
+
+INSERT INTO PRODUCTO(ID,NOMBRE, PRECIO) VALUES
+(1,'Producto 1', 13.7447817594662),
+(2, 'Producto 2', 15.504554622987609),
+(3, 'Producto 3', 13.894065124488646),
+(4,  'Producto 4', 11.88227167001587),
+(5,  'Producto 5', 19.712651122160853),
+(6,  'Producto 6', 13.908057022812256),
+(7,  'Producto 7', 13.269162198915039),
+(8, 'Producto 8', 11.361505074956748),
+(9,  'Producto 9', 16.370210279999082),
+(10,  'Producto 10', 18.38855699920139);    
+
+
+          [42102-200]

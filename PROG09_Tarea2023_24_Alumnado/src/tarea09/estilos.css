@@ -1,0 +1,19 @@
+
+.card {
+    -fx-background-image: url('assets/interfaz/reversoCarta.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size:245 210;/*Ancho x Alto*/
+
+}
+
+/* resto de estilos (define un mínmo de 15 reglas)*/
+.body{
+    -fx-cursor:hand;
+    -fx-background-image: url('assets/interfaz/NINTENDO.jpg');
+    -fx-background-size: 1500px 950px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+}
+

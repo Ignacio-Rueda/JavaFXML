@@ -1,0 +1,30 @@
+<ejercicio3.Recetario>
+  <recetas>
+    <ejercicio3.Receta>
+      <nombre>Ensalada de Pimiento Dulce</nombre>
+      <tipoPlato>Ensalada</tipoPlato>
+      <ingredientes>
+        <string>pimientos dulces</string>
+        <string>cebolla</string>
+        <string>vinagre</string>
+        <string>aceite</string>
+        <string>sal</string>
+        <string>pimienta</string>
+      </ingredientes>
+      <instrucciones>Se lavan 4 pimientos dulces, se les quita la parte superior y las semillas y se cortan en tiras.Se pela la cebolla y se corta en tiras delgadas.En un tazón grande, se mezcla el vinagre, el aceite, la sal y la pimienta.Se añade el pimiento dulce y la cebolla y se revuelve hasta que quede todo cubierto.Se cubre el tazón y se refrigera durante 30 minutos antes de servir.</instrucciones>
+      <fechaCreacion>2010-01-23</fechaCreacion>
+    </ejercicio3.Receta>
+    <ejercicio3.Receta>
+      <nombre>Calabacita fantástica</nombre>
+      <tipoPlato>Acompañamiento</tipoPlato>
+      <ingredientes>
+        <string>calabacitas</string>
+        <string>ajo en polvo</string>
+        <string>sal</string>
+        <string>queso parmesano</string>
+      </ingredientes>
+      <instrucciones>Se precalienta el horno a 375 grados.Se cortan 2 calabacines en rodajas y se extienden en un molde para pastel.Sobre las calabitas se rocían dos cucharadas de ajo en polvo,la sal y el queso.Se hornea sin cubrir 40 minutos.</instrucciones>
+      <fechaCreacion>2000-02-02</fechaCreacion>
+    </ejercicio3.Receta>
+  </recetas>
+</ejercicio3.Recetario>
