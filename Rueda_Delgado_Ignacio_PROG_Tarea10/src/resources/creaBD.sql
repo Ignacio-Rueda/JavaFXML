@@ -7,15 +7,15 @@ DROP TABLE IF EXISTS Peliculas ;
 --
 CREATE TABLE Peliculas(
    codigo INT NOT NULL PRIMARY KEY,
-   titulo  VARCHAR NOT NULL,
-   sinopsis VARCHAR NOT NULL,
+   titulo  VARCHAR(50) NOT NULL,
+   sinopsis VARCHAR(200) NOT NULL,
    fEstreno DATE NOT NULL
 );
 
 CREATE TABLE Plataformas(
    codigo INT NOT NULL PRIMARY KEY,
-   nombre VARCHAR NOT NULL,
-   urlLogotipo VARCHAR NOT NULL
+   nombre VARCHAR(50)NOT NULL,
+   urlLogotipo VARCHAR(200) NOT NULL
 );
 
 CREATE TABLE Disponible_en(

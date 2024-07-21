@@ -248,7 +248,7 @@ public class Aplicacion {
      * @param con Conexión a la BD
      */
     private static void mostrarPeliculas(Connection con) {
-        //Ejecutamos la consulta sobre la tabla peliculas y mostramos su contenido.
+        //Ejecutamos la consultaActualizar sobre la tabla peliculas y mostramos su contenido.
         String query = "SELECT codigo,titulo,sinopsis,fEstreno FROM peliculas";
         if (con != null) {
             try (Statement consulta = con.createStatement()) {
@@ -275,7 +275,7 @@ public class Aplicacion {
      *
      * @param con Conexión a la BD
      */
-    private static void modificarPlataforma(Connection con) {
+ private static void modificarPlataforma(Connection con) {
         boolean existePlataforma = false;
         //Mostramos las plataformas disponibles.
         String query = "SELECT codigo,nombre FROM plataformas";
@@ -390,9 +390,7 @@ public class Aplicacion {
         String queryDisponibleEn = "SELECT codPelicula FROM disponible_en WHERE codPlataforma=?";
         String queryPeliculas = "SELECT titulo FROM peliculas WHERE codigo=?";
         if (con != null) {
-            try (PreparedStatement consultaPlataforma = con.prepareStatement(queryPlataforma); 
-                 PreparedStatement consultaDisponiblesEn = con.prepareStatement(queryDisponibleEn); 
-                 PreparedStatement consultaPeliculas = con.prepareStatement(queryPeliculas)) {
+            try (PreparedStatement consultaPlataforma = con.prepareStatement(queryPlataforma); PreparedStatement consultaDisponiblesEn = con.prepareStatement(queryDisponibleEn); PreparedStatement consultaPeliculas = con.prepareStatement(queryPeliculas)) {
                 ResultSet resultadoPlataforma = consultaPlataforma.executeQuery();
                 System.out.println(" --------------------------------------------------------------------------------");
                 System.out.println("| PELICULAS POR PLATAFORMAS                                                      |");
